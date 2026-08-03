@@ -2,8 +2,14 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>老山檀・品香評測表</title>
+<meta name="theme-color" content="#221913">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="品香評測">
+<link rel="apple-touch-icon" href="icons/incense-180.png">
+<link rel="icon" type="image/png" href="icons/incense-180.png">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -112,9 +118,25 @@
     white-space:nowrap;
   }
   .toast.show{opacity:1;}
+
+  /* 回首頁按鈕（各工具共用樣式） */
+  .home-btn{
+    position:fixed;top:calc(10px + env(safe-area-inset-top));right:12px;z-index:99;
+    display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:20px;
+    background:rgba(34,25,19,.82);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+    border:1px solid var(--warm);color:var(--warm);
+    font-size:12.5px;font-weight:500;letter-spacing:.08em;text-decoration:none;
+  }
+  .home-btn svg{display:block;}
+  .home-btn:active{background:rgba(217,164,65,.2);}
+  header{padding-right:96px;}
 </style>
 </head>
 <body>
+<a class="home-btn" href="index.html" aria-label="回首頁">
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V21h13V9.5"/></svg>
+  首頁
+</a>
 <div class="wrap">
   <header>
     <div class="eyebrow">印度老山檀 ・ 專業品香</div>
